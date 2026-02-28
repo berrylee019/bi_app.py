@@ -3,7 +3,8 @@ import google.generativeai as genai
 from PIL import Image
 
 # 1. API 설정 (본인의 API 키 입력)
-genai.configure(api_key="AIzaSyA26k8CXJyC4gs6mmpbCeR7yiTbFLmSOMA")
+import streamlit as st
+genai.configure(api_key=st.secrets["AIzaSyDxoKEY5AkTynEdyWz2AcfsiZbOba8bX8c"])
 
 # 2. 페이지 설정 및 브랜딩
 st.set_page_config(page_title="Microhard BI 전략가", page_icon="📊", layout="centered")
@@ -57,5 +58,6 @@ st.markdown("---")
 st.write("🔧 다른 서비스가 필요하신가요?")
 
 st.link_button("Error 해결사 바로가기", "https://error-doctor.streamlit.app") # 기존 앱 주소 입력
+
 
 
