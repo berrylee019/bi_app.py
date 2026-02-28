@@ -3,7 +3,7 @@ import google.generativeai as genai
 from PIL import Image
 
 # 1. API 설정 (본인의 API 키 입력)
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
+genai.configure(api_key="AIzaSyD1Wq9DwCD43Q9ff6C7Gy6Yu4PHRhcQca0")
 
 # 2. 페이지 설정 및 브랜딩
 st.set_page_config(page_title="Microhard BI 전략가", page_icon="📊", layout="centered")
@@ -55,4 +55,5 @@ if uploaded_file:
 # 5. 하단 푸터 (다른 서비스로의 연결)
 st.markdown("---")
 st.write("🔧 다른 서비스가 필요하신가요?")
+
 st.link_button("Error 해결사 바로가기", "https://error-doctor.streamlit.app") # 기존 앱 주소 입력
