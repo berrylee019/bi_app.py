@@ -26,7 +26,7 @@ if uploaded_file:
     if st.button("🚀 비즈니스 인사이트 추출"):
         try:
             with st.spinner("전문 전략가가 데이터를 분석 중입니다..."):
-                model = genai.GenerativeModel("gemini-2.0-flash")
+                model = genai.GenerativeModel("gemini-2.5-flash")
                 
                 # BI 전용 시스템 프롬프트
                 system_prompt = """
@@ -58,6 +58,7 @@ st.markdown("---")
 st.write("🔧 다른 서비스가 필요하신가요?")
 
 st.link_button("Error 해결사 바로가기", "https://error-doctor.streamlit.app") # 기존 앱 주소 입력
+
 
 
 
