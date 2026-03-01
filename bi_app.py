@@ -52,12 +52,26 @@ if uploaded_file:
                 )
         except Exception as e:
             st.error(f"오류가 발생했습니다: {e}")
+# --- 피드백을 받습니다. ---
+st.markdown("---")
+st.subheader("💬 여러분의 의견이 궁금해요!")
+st.write("서비스가 도움이 되셨나요? 더 나은 서비스를 위해 짧은 의견을 남겨주세요.")
+contact_form = """
+<form action="https://formsubmit.co/bslee@yahoo.com" method="POST">
+     <input type="text" name="name" placeholder="성함/닉네임" required>
+     <input type="email" name="email" placeholder="이메일 주소" required>
+     <textarea name="message" placeholder="피드백을 자유롭게 남겨주세요"></textarea>
+     <button type="submit">의견 보내기</button>
+</form>
+"""
+st.markdown(contact_form, unsafe_allow_html=True)
 
 # 5. 하단 푸터 (다른 서비스로의 연결)
 st.markdown("---")
 st.write("🔧 다른 서비스가 필요하신가요?")
 
 st.link_button("Error 해결사 바로가기", "https://error-doctor.streamlit.app") # 기존 앱 주소 입력
+
 
 
 
