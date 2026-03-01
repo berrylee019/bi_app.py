@@ -17,6 +17,30 @@ st.markdown("---")
 st.info("💡 매출 차트, 영수증, 또는 경영 대시보드 스크린샷을 업로드하세요. AI가 비즈니스 인사이트를 도출합니다.")
 
 # 4. 파일 업로드
+# --- 영상 업로드 가이드 섹션 ---
+st.title("✨ AI 퍼스널 스타일 가이드")
+st.markdown("### 🤳 당신의 스타일을 10초 만에 분석해 드립니다")
+
+with st.expander("🎥 **더 정확한 분석을 위한 영상 촬영 꿀팁 (필독!)**", expanded=True):
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("""
+        **1. 전신 샷은 필수!** 머리부터 발끝까지 화면에 다 들어와야  
+        정확한 비율 분석이 가능해요.
+        
+        **2. 천천히 360도 회전** 앞, 옆, 뒤태를 모두 보여주시면  
+        입체적인 핏 가이드를 드립니다.
+        """)
+    with col2:
+        st.markdown("""
+        **3. 밝은 곳에서 촬영** 조명이 밝아야 옷의 질감과  
+        퍼스널 컬러를 정확히 잡아내요.
+        
+        **4. 5~15초 내외 권장** 너무 길면 업로드 시간이 오래 걸려요!
+        """)
+
+# 실제 업로드 버튼
+uploaded_file = st.file_uploader("분석할 쇼핑/스타일 영상을 업로드하세요.", type=["mp4", "mov", "avi"])
 uploaded_file = st.file_uploader("분석할 경영 자료를 업로드하세요.", type=["png", "jpg", "jpeg"])
 
 if uploaded_file:
@@ -71,6 +95,7 @@ st.markdown("---")
 st.write("🔧 다른 서비스가 필요하신가요?")
 
 st.link_button("Error 해결사 바로가기", "https://error-doctor.streamlit.app") # 기존 앱 주소 입력
+
 
 
 
